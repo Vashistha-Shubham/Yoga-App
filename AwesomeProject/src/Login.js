@@ -19,7 +19,7 @@ const Login = ({navigation}) => {
     console.log('Username:', username);
     console.log('Password:', password);
     // Example: You might want to make an API call to authenticate the user
-    navigation.navigate('Home');
+    navigation.navigate('Tabs');
   };
 
   // Define button styles and label

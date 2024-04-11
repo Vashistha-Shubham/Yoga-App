@@ -1,22 +1,19 @@
-
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './src/Login';
-import Home from './src/Home';
-import MainPage from './src/MainPage';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Login from './src/Login';
+import Tabs from './src/Navigation/tabs'; // Import the component where Tab.Navigator is defined
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="MainPage" component={MainPage} />
-
+        <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
